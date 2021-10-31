@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pinacolada</title>
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    
+
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.2.0/firebase-app.js";
+        import "https://www.gstatic.com/firebasejs/9.2.0/firebase-database.js"
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+          apiKey: "AIzaSyCLYLtWnXTjuCrV9HZb5bvInF2YLdDR5L8",
+          authDomain: "foodmenu-81030.firebaseapp.com",
+          databaseURL: "https://foodmenu-81030-default-rtdb.firebaseio.com",
+          projectId: "foodmenu-81030",
+          storageBucket: "foodmenu-81030.appspot.com",
+          messagingSenderId: "1094305222400",
+          appId: "1:1094305222400:web:a13d25a0cf464a4c9f6de5"
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+      </script>
+</head>
+<body>
+    <nav class="navbar target">
+        <a href="index.html" class="navbar-link">
+            <i class="fas fa-home"></i>
+            <span>Home</span>
+        </a>
+    
+   
+        <a href="order.html" class="navbar-link">
+            <i class="fas fa-hamburger"></i>
+            <span>Order</span>
+        </a>
+    
+    
+        <a href="#" class="navbar-link" onclick="logout()">
+            <i class="fas fa-sign-out-alt"></i>
+            <span>Logout</span>
+        </a>
+   </nav>
+    <div class="menu target"></div>
+
+
+    <div class="container">
+        <section class="section1">
+           <h1 class="section-heading">
+                Pinacolada<sub class="section-heading2">Foodie's heaven</sub></h1>
+            </h1>
+            
+            <div class="section-1-icons">
+                <i class="fas fa-cheese change"></i>
+                <i class="fas fa-egg"></i>
+                <i class="fas fa-fish"></i>
+                <i class="fas fa-apple-alt"></i>
+                <i class="fas fa-ice-cream"></i>
+                <i class="fas fa-cookie"></i>
+            </div>
+        </section>
+
+        <section class="section-1.2">
+            <div class="form-group">
+            <input type="text" id="uname" class="form-control" placeholder="Please enter you name">
+            <input type="number" id="phoneNumber" class="form-control" placeholder="Phone Number">
+            </div>
+            <button id="Submit" class="btn " onClick="userDetails()">Enter</button>
+
+        </section>
+        <section class="section-2">
+            <h1 class="section-heading">Chef's Special</h1>
+            <div class="card-container">
+              <div class="card">
+                  <img src="pizza.png" class="card-img">
+                  <h3 class="card-name">Pizza</h3>
+                  <button class="card-btn">Order now</button>
+
+            </div>
+            <div class="card">
+                <img src="lasagna.jpg" class="card-img">
+                <h3 class="card-name">Lasagna</h3>
+                <button class="card-btn">Order now</button>
+
+             </div>
+            <div class="card">
+                <img src="wraps.jpg" class="card-img">
+                <h3 class="card-name">Wraps</h3>
+                <button class="card-btn">Order now</button>
+
+            </div>
+            </div>
+        </section>
+    </div>
+    <script src="script.js"></script>
+    <script src="placeOrder.js"></script>
+</body>
+</html>
